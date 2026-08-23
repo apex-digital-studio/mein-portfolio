@@ -1,34 +1,384 @@
-body {
-    font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Montserrat:wght@300;400;500;600&display=swap');
+
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-header {
-    background-color: #2b5c8f;
-    color: white;
+body {
+    background-color: #050505;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+.section-padding {
+    padding: 100px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Nav Bar */
+.luxury-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    background: rgba(5, 5, 5, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+}
+
+.logo {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: #ffffff;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #c5a059;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 2rem;
+    overflow: hidden;
+    padding: 0 20px;
 }
 
-main {
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    filter: brightness(0.3);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
     max-width: 800px;
-    margin: 2rem auto;
-    padding: 1rem;
 }
 
-section {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.subtitle {
+    font-size: 0.8rem;
+    letter-spacing: 5px;
+    color: #c5a059;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.hero-content h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3.2rem;
+    font-weight: 400;
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    color: #aaaaaa;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.luxury-btn {
+    display: inline-block;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 16px 40px;
+    text-decoration: none;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    transition: all 0.4s ease;
+}
+
+.luxury-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Section Title */
+.section-title {
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 5px;
+    margin-bottom: 60px;
+    color: #ffffff;
+}
+
+/* Accordion Services */
+.accordion-item {
+    border-bottom: 1px solid #222;
+    padding: 25px 0;
+    cursor: pointer;
+}
+
+summary {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+summary:hover {
+    color: #c5a059;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+.accordion-content {
+    margin-top: 20px;
+    color: #888;
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+/* Portfolio */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.portfolio-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #1a1a1a;
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-card:hover img {
+    transform: scale(1.05);
+}
+
+.portfolio-info {
+    padding: 20px;
+    background-color: #0a0a0a;
+    border-top: 1px solid #1a1a1a;
+}
+
+.portfolio-info h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.portfolio-info p {
+    color: #c5a059;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+/* Pricing */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.price-card {
+    background-color: #0a0a0a;
+    border: 1px solid #1a1a1a;
+    padding: 40px 30px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.price-card.featured {
+    border: 1px solid #c5a059;
+}
+
+.badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #c5a059;
+    color: #000;
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    letter-spacing: 2px;
+}
+
+.price-card h3 {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.price-subtitle {
+    color: #666;
+    font-size: 0.8rem;
+    margin-bottom: 30px;
+}
+
+.price-card ul {
+    list-style: none;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.price-card ul li {
+    color: #aaa;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.price-card ul li::before {
+    content: "—";
+    color: #c5a059;
+    position: absolute;
+    left: 0;
+}
+
+.luxury-btn-card {
+    display: block;
+    border: 1px solid #333;
+    color: #fff;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    transition: all 0.3s;
+}
+
+.luxury-btn-card:hover {
+    border-color: #fff;
+}
+
+.luxury-btn-gold {
+    display: inline-block;
+    border: 1px solid #c5a059;
+    color: #c5a059;
+    padding: 15px 40px;
+    text-decoration: none;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    transition: all 0.4s ease;
+    background: transparent;
+    cursor: pointer;
+}
+
+.luxury-btn-gold:hover {
+    background-color: #c5a059;
+    color: #000;
+}
+
+/* Contact Form */
+.contact-section {
+    text-align: center;
+    background-color: #0a0a0a;
+    border: 1px solid #1a1a1a;
+}
+
+.contact-section p {
+    color: #888;
+    margin-bottom: 40px;
+}
+
+.luxury-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.luxury-form input, .luxury-form textarea {
+    background: #050505;
+    border: 1px solid #222;
+    padding: 15px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.luxury-form input:focus, .luxury-form textarea:focus {
+    outline: none;
+    border-color: #c5a059;
+}
+
+.whatsapp-direct {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #1a1a1a;
+}
+
+.whatsapp-direct p {
+    margin-bottom: 20px;
+    font-size: 0.85rem;
+}
+
+.whatsapp-btn {
+    display: inline-block;
+    border: 1px solid #25D366;
+    color: #25D366;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    transition: all 0.3s;
+}
+
+.whatsapp-btn:hover {
+    background-color: #25D366;
+    color: #000;
 }
 
 footer {
     text-align: center;
-    padding: 1rem;
-    background-color: #222;
-    color: white;
+    padding: 40px;
+    color: #444;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
 }
