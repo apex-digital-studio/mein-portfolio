@@ -219,7 +219,7 @@ summary::-webkit-details-marker {
     gap: 30px;
 }
 
-.price-card {
+.pricing-card {
     background-color: #0a0a0a;
     border: 1px solid #1a1a1a;
     padding: 40px 30px;
@@ -230,7 +230,7 @@ summary::-webkit-details-marker {
     justify-content: space-between;
 }
 
-.price-card.featured {
+.pricing-card.featured {
     border: 1px solid #c5a059;
 }
 
@@ -247,25 +247,25 @@ summary::-webkit-details-marker {
     letter-spacing: 2px;
 }
 
-.price-card h3 {
+.pricing-card h3 {
     font-family: 'Cinzel', serif;
     letter-spacing: 3px;
     margin-bottom: 10px;
 }
 
-.price-subtitle {
+.pricing-card .subtitle {
     color: #666;
     font-size: 0.8rem;
     margin-bottom: 30px;
 }
 
-.price-card ul {
+.pricing-card ul.features {
     list-style: none;
     margin-bottom: 40px;
     text-align: left;
 }
 
-.price-card ul li {
+.pricing-card ul.features li {
     color: #aaa;
     font-size: 0.85rem;
     margin-bottom: 15px;
@@ -273,14 +273,15 @@ summary::-webkit-details-marker {
     position: relative;
 }
 
-.price-card ul li::before {
+.pricing-card ul.features li::before {
     content: "—";
     color: #c5a059;
     position: absolute;
     left: 0;
 }
 
-.luxury-btn-card {
+/* Buttons in Pricing Cards */
+.btn {
     display: block;
     border: 1px solid #333;
     color: #fff;
@@ -289,42 +290,25 @@ summary::-webkit-details-marker {
     font-size: 0.75rem;
     letter-spacing: 2px;
     transition: all 0.3s;
+    text-align: center;
 }
 
-.luxury-btn-card:hover {
+.btn:hover {
     border-color: #fff;
 }
 
-.luxury-btn-gold {
-    display: inline-block;
-    border: 1px solid #c5a059;
+.btn.primary-btn {
+    border-color: #c5a059;
     color: #c5a059;
-    padding: 15px 40px;
-    text-decoration: none;
-    font-size: 0.75rem;
-    letter-spacing: 3px;
-    transition: all 0.4s ease;
     background: transparent;
-    cursor: pointer;
 }
 
-.luxury-btn-gold:hover {
+.btn.primary-btn:hover {
     background-color: #c5a059;
     color: #000;
 }
 
 /* Contact Form */
-.contact-section {
-    text-align: center;
-    background-color: #0a0a0a;
-    border: 1px solid #1a1a1a;
-}
-
-.contact-section p {
-    color: #888;
-    margin-bottom: 40px;
-}
-
 .luxury-form {
     display: flex;
     flex-direction: column;
@@ -346,33 +330,6 @@ summary::-webkit-details-marker {
 .luxury-form input:focus, .luxury-form textarea:focus {
     outline: none;
     border-color: #c5a059;
-}
-
-.whatsapp-direct {
-    margin-top: 50px;
-    padding-top: 30px;
-    border-top: 1px solid #1a1a1a;
-}
-
-.whatsapp-direct p {
-    margin-bottom: 20px;
-    font-size: 0.85rem;
-}
-
-.whatsapp-btn {
-    display: inline-block;
-    border: 1px solid #25D366;
-    color: #25D366;
-    padding: 12px 30px;
-    text-decoration: none;
-    font-size: 0.75rem;
-    letter-spacing: 2px;
-    transition: all 0.3s;
-}
-
-.whatsapp-btn:hover {
-    background-color: #25D366;
-    color: #000;
 }
 
 footer {
