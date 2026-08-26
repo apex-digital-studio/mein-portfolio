@@ -37,9 +37,9 @@ body {
 
 .logo {
     font-family: 'Cinzel', serif;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 800;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     color: #ffffff;
 }
 
@@ -76,7 +76,7 @@ body {
     height: 100%;
     object-fit: cover;
     z-index: 1;
-    filter: brightness(0.3);
+    filter: brightness(0.25);
 }
 
 .hero-content {
@@ -95,9 +95,9 @@ body {
 
 .hero-content h1 {
     font-family: 'Cinzel', serif;
-    font-size: 3.2rem;
+    font-size: 3rem;
     font-weight: 400;
-    letter-spacing: 6px;
+    letter-spacing: 5px;
     margin-bottom: 20px;
 }
 
@@ -280,7 +280,7 @@ summary::-webkit-details-marker {
     left: 0;
 }
 
-/* Buttons in Pricing Cards */
+/* Buttons */
 .btn {
     display: block;
     border: 1px solid #333;
@@ -308,7 +308,36 @@ summary::-webkit-details-marker {
     color: #000;
 }
 
+.luxury-btn-gold {
+    display: inline-block;
+    border: 1px solid #c5a059;
+    color: #c5a059;
+    padding: 15px 40px;
+    text-decoration: none;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    transition: all 0.4s ease;
+    background: transparent;
+    cursor: pointer;
+}
+
+.luxury-btn-gold:hover {
+    background-color: #c5a059;
+    color: #000;
+}
+
 /* Contact Form */
+.contact-section {
+    text-align: center;
+    background-color: #0a0a0a;
+    border: 1px solid #1a1a1a;
+}
+
+.contact-section p {
+    color: #888;
+    margin-bottom: 40px;
+}
+
 .luxury-form {
     display: flex;
     flex-direction: column;
@@ -330,6 +359,33 @@ summary::-webkit-details-marker {
 .luxury-form input:focus, .luxury-form textarea:focus {
     outline: none;
     border-color: #c5a059;
+}
+
+.whatsapp-direct {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #1a1a1a;
+}
+
+.whatsapp-direct p {
+    margin-bottom: 20px;
+    font-size: 0.85rem;
+}
+
+.whatsapp-btn {
+    display: inline-block;
+    border: 1px solid #25D366;
+    color: #25D366;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    transition: all 0.3s;
+}
+
+.whatsapp-btn:hover {
+    background-color: #25D366;
+    color: #000;
 }
 
 footer {
